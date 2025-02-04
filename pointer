@@ -1,0 +1,104 @@
+#include<iostream>
+using namespace std;
+int main(){
+    // 1. What is a pointer in C++?
+    // A pointer a  variable that stores the memory address of another variable.
+    // 2. How do you declare a pointer in C++?
+    // int *ptr;
+    // 3. What does the * (asterisk) symbol do when declaring a pointer?
+    // int *ptr; 'ptr' is a pointer to integer.
+    // 4. How do you assign the address of a variable to a pointer?
+    // int x =10;
+    // int *ptr = &x;
+    // 5. How do you access the value stored at a pointer’s address?
+    // int x = 10;
+    // int *ptr = &x;
+    // cout<<*ptr; //output is 10
+
+    // 6. What is the difference between & (address-of) and * (dereference) operators?
+    // int x = 5;
+    // int *ptr = &x;
+    // cout<<&x;
+    // cout<<*ptr;
+
+    // & -> is used to get the address of variable
+    // *->is used to access the value at the pointer's address
+
+    // 7. Can a pointer store the address of another pointer? What is it called?
+    // yes it is called pointer to pointer (double pointer)
+    // int a=7;
+    // int *ptr1=&a;
+    // int **ptr2=&ptr1; //pointer to pointer
+
+    // 8. What happens if you try to dereference a null pointer?
+//     int *ptr =nullptr;
+// cout<<ptr;
+
+    // 9. How do you dynamically allocate memory using a pointer in C++?
+    // int *ptr = new int(10);
+    // cout<<*ptr<<" ";
+
+    // 10. What keyword is used to free dynamically allocated memory?
+        // int a= 7;
+        // int *ptr = &a;
+        // ptr =nullptr;
+        // delete ptr;
+
+
+
+// 1. Can a pointer be assigned to another pointer?
+    // int a =10;
+    // int *ptr =&a;
+    // int *ptr1=ptr;
+    // cout<<*ptr<<" "<< (*ptr1);
+
+    // 2. What is a nullptr in C++?
+    // nullptr is a keyword introduction in c++ 11 that represents a null pointer(a pointer that doesn't point to any valid menmory address)
+    // int *ptr =nullptr;
+
+    // 3. How do you check if a pointer is nullptr before using it?
+    // int *ptr =nullptr;
+    // if(ptr ==nullptr){
+    //     cout<<"Pointer is null";
+    // }
+    // else{
+    //     cout<<*ptr<<endl;
+    // }
+    // // 4. What happens if you try to access an uninitialized pointer?
+
+    // int *ptr;
+    // cout<<*ptr;
+    // Accessing an uninitaialzed pointer leads to undefined behaviour , which may crash the prpogram or producdes garbage __value_
+
+    // 5. How do you declare a pointer to a char variable?
+    // char ch= 'A';
+    // char *cptr= &ch;
+    // cout<<*cptr;
+
+    // 6. Can a pointer be used to modify the value of a variable?
+    // int x = 10;
+    // int *ptr =&x;
+    // *ptr =20;
+    // cout<<x;
+
+    // 7. What is an array pointer in C++?
+    // int arr[]={1,2,3};
+    // int *ptr = arr;
+    // cout<<*ptr;
+
+    // 8. How do you access array elements using a pointer?
+    // int arr[]={10,20,30};
+    // int *ptr = arr;
+    // cout<<*(ptr+1); //20
+
+
+    // 10. How do you dynamically allocate an array using a pointer?
+    // int *arr=new int[5];
+    // arr[0]=10;
+    // cout<<arr[0];
+    // delete []arr;
+
+
+
+
+}
