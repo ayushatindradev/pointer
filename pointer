@@ -1,6 +1,25 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
+void modify(int *p)
+{
+    *p = 100;
+}
+void printArray(int *arr, int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+int main()
+{
     // 1. What is a pointer in C++?
     // A pointer a  variable that stores the memory address of another variable.
     // 2. How do you declare a pointer in C++?
@@ -31,22 +50,20 @@ int main(){
     // int **ptr2=&ptr1; //pointer to pointer
 
     // 8. What happens if you try to dereference a null pointer?
-//     int *ptr =nullptr;
-// cout<<ptr;
+    //     int *ptr =nullptr;
+    // cout<<ptr;
 
     // 9. How do you dynamically allocate memory using a pointer in C++?
     // int *ptr = new int(10);
     // cout<<*ptr<<" ";
 
     // 10. What keyword is used to free dynamically allocated memory?
-        // int a= 7;
-        // int *ptr = &a;
-        // ptr =nullptr;
-        // delete ptr;
+    // int a= 7;
+    // int *ptr = &a;
+    // ptr =nullptr;
+    // delete ptr;
 
-
-
-// 1. Can a pointer be assigned to another pointer?
+    // 1. Can a pointer be assigned to another pointer?
     // int a =10;
     // int *ptr =&a;
     // int *ptr1=ptr;
@@ -91,14 +108,180 @@ int main(){
     // int *ptr = arr;
     // cout<<*(ptr+1); //20
 
-
     // 10. How do you dynamically allocate an array using a pointer?
     // int *arr=new int[5];
     // arr[0]=10;
     // cout<<arr[0];
     // delete []arr;
+    // 1. What is a pointer in C++?
+    // A pointr is a variablme that store the adress of another varible.
+    // 2. How do you declare a pointer to an integer?
+    // int *ptr;
+    // 3. What does the * (dereference) operator do in pointers?
+    // The * operator is used to access the value stored at the address a pointer is pointing to.
+    // 4. How do you assign the address of a variable to a pointer?
+    // int x = 10;
+    // int *ptr= &x
+    // 5. What is a NULL pointer?
+    // int *ptr= NULL;
+    // 6. Write a program to declare an integer pointer, assign a value to it, and print the value using the pointer.
+    // int x = 10;
+    // int *ptr = &x;
+    // cout<<"value of :"<<*ptr<<endl;
+    // // 7. What will be the output of the following code?
+    // int x = 10;
+    // int *ptr = &x;
+    // cout<<*ptr<<endl;
+    // 8. How do you dynamically allocate memory for an integer using pointers?
+    // int *ptr = new int;
+    // *ptr = 10;
+    // cout<<"value of ptr: "<<*ptr<<endl;
+    // delete ptr;
+    // return 0;
+    // 9. What happens if you try to dereference a NULL pointer?
+    // int *ptr = NULL;
+    // cout<<"value of ptr: "<<*ptr<<endl;
+    // 10. How do you free dynamically allocated memory in C++?
 
+    // int *ptr = new int(25);
+    // delete ptr;
+    // ptr =nullptr;
 
+    // Basic Pointer Concepts (1-10)
+    // Declare a pointer to an integer.
+    // Assign the address of an integer variable to a pointer.
+    // Print the address stored in a pointer.
+    // Print the value of a variable using a pointer.
+    // Change the value of a variable using a pointer.
+    // Declare a pointer to a float and assign a value.
+    // Declare a char pointer and store the address of a char variable.
+    // Declare a pointer to a pointer (double pointer).
+    // Assign a NULL pointer and print its value.
+    // Declare a constant pointer (const int *ptr) and assign a value.
+    // int *ptr;
 
+    // int x = 10;
+    // ptr = &x;
+    // cout<<ptr<<endl;
+    // cout<<*ptr<<endl;
+    // ptr* = 50;
+    // cout<<*ptr<<endl;
+    // float f = 5.5;
+    // float *fptr = &f;
+    // cout<<*fptr<<endl;
+    // char ch = 'A';
+    // char *cptr = &ch;
+    // cout<<*cptr<<endl;
+    // int **dptr = &dptr;
+    // cout<<**dptr<<endl;
 
+    // int *nullPtr = NULL;
+    // cout<<nullPtr<<endl;
+    // const int y = 30;
+    // const int *cptr = &y;
+    // cout<<*cptr<<endl;
+
+    //     Pointer Arithmetic (11-20)
+    // Increment a pointer and print the new address.
+    // Decrement a pointer and print the new address.
+    // Add 1 to a pointer and print the value it points to.
+    // Subtract 1 from a pointer and print the value it points to.
+    // Compare two pointers (ptr1 == ptr2).
+    // Find the difference between two pointers (ptr2 - ptr1).
+    // Use a pointer to traverse an integer array.
+    // Use a pointer to traverse a char array (string).
+    // Print the first element of an array using a pointer.
+    // Print the last element of an array using a pointer.
+    int arr[] = {10, 20, 30};
+    int *ptr = arr;
+
+    // ptr++;
+    // cout<<ptr<<endl;
+
+    // ptr--;
+    // cout<<ptr<<endl;
+
+    // ptr--;
+    // cout<<*ptr<<endl;
+
+    // int *ptr2 = arr+1;
+    // cout<<(ptr2-ptr)<<endl;
+
+    // for(int i=0;i<3;i++){
+    //     cout<<*(arr+i)<<" ";
+    // }
+
+    // char str[]="hello";
+    // char *cptr = str;
+    // while(*cptr!='\0'){
+    //     cout<<*cptr<<endl;
+    //     cptr++;
+    // }
+
+    // Dynamic Memory Allocation (21-30)
+    // Dynamically allocate memory for an int and assign a value.
+    // Dynamically allocate memory for a float and assign a value.
+    // Free dynamically allocated memory using delete.
+    // Allocate an integer array dynamically.
+    // Free an integer array using delete[].
+    // Allocate a char array dynamically and assign a string.
+    // Free a dynamically allocated char array.
+    // Allocate memory for an array and take input from the user.
+    // Print elements of a dynamically allocated array.
+    // Set a pointer to nullptr after freeing memory.
+
+    // int *ptr = new int(10);
+    // cout<<*ptr<<endl;
+    // delete[] ptr;
+
+    // float *ptr = new float(3.5);
+    // cout<<*ptr<<endl;
+    // delete ptr;
+    // int *p = new int;
+    // // delete p;
+
+    // int *arr = new int[3]{1,2,3};
+    // cout<<arr[0]<<" ";
+    // delete[] arr;
+
+    // Pointers & Arrays (31-40)
+    // Print all elements of an array using a pointer.
+    // Modify array elements using a pointer.
+    // Swap two array elements using a pointer.
+    // Reverse an array using a pointer.
+    // Find the sum of all elements in an array using a pointer.
+    // Find the maximum element in an array using a pointer.
+    // Find the minimum element in an array using a pointer.
+    // Check if an array is sorted using a pointer.
+    // Copy one array into another using pointers.
+    // Use pointer + index to access an array element (*(ptr + i)).
+    // int arr[]={1,2,3,4,5};
+    // int *ptr = arr;
+    // for(int i=0;i<5;i++){
+    //     cout<<*(ptr+i)<<" ";
+    // }
+    // cout<<endl;
+
+    // *(ptr + 2)=10;
+    // cout<<arr[2]<<endl;
+    // Pointers & Functions (41-50)
+    // Pass an integer pointer to a function and modify its value.
+    // Pass an array to a function using a pointer.
+    // Return a pointer from a function.
+    // Swap two numbers using pointers.
+    // Use const int *ptr to prevent modification of a variable in a function.
+    // Create and return a dynamically allocated array from a function.
+    // Print a string using a pointer.
+    // Find the length of a string using a pointer.
+    // Reverse a string using a pointer.
+    // Count the number of vowels in a string using a pointer.
+
+    // int x;
+    // modify(&x);
+    // cout<<x <<endl;
+    // int arr[]={1,2,3,4,5};
+    // printArray(arr, 5);
+    // int a = 10,b =20;
+    // swap(&a,&b);
+    // cout<<a<<" "<<b<<endl;
 }
